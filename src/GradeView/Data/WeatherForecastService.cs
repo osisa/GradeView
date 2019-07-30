@@ -14,12 +14,15 @@ namespace GradeView.Data
         public Task<WeatherForecast[]> GetForecastAsync(DateTime startDate)
         {
             var rng = new Random();
-            return Task.FromResult(Enumerable.Range(1, 5).Select(index => new WeatherForecast
+            WeatherForecast[] WeatherArray = new WeatherForecast[7];
+            for (int i = 0; i < 7; i++)
             {
-                Date = startDate.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            }).ToArray()); 
+                DateTime Date = startDate.AddDays(i);
+                int TemperatureC = rng.Next(-20, 40);
+                string Summary = Summaries[(TemperatureC + 20) / 6];
+                WeatherArray[i] = new WeatherForecast { Date = Date, TemperatureC = TemperatureC, Summary = Summary };
+            }
+            return Task.FromResult(WeatherArray);
         }
     }
 }

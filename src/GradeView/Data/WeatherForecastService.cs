@@ -18,8 +18,8 @@ namespace GradeView.Data
             for (int i = 0; i < 7; i++)
             {
                 DateTime Date = startDate.AddDays(i);
-                int TemperatureC = rng.Next(-20, 40);
-                string Summary = Summaries[(TemperatureC + 20) / 6];
+                int TemperatureC = rng.Next(-20, 50);
+                string Summary = Summaries[(TemperatureC + 20) / 7];
                 WeatherArray[i] = new WeatherForecast { Date = Date, TemperatureC = TemperatureC, Summary = Summary };
             }
             return Task.FromResult(WeatherArray);

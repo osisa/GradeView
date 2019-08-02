@@ -85,6 +85,7 @@ stages:
       persistCredentials: 'true'
 
     - powershell: |
+        #dir $(build.artifactstagingdirectory)\disttmp\ | Out-File -FilePath $(build.artifactstagingdirectory)\out.txt
         $asmversion=[Reflection.AssemblyName]::GetAssemblyName("$(build.artifactstagingdirectory)\disttmp\GradeView\dist\_framework\_bin\GradeView.dll").Version
         Write-Host $asmversion
         Write-Host "##vso[task.setvariable variable=VersionExt;]$asmversion"

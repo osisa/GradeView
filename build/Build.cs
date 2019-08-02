@@ -23,7 +23,7 @@ class Build : NukeBuild
     ///   - Microsoft VisualStudio     https://nuke.build/visualstudio
     ///   - Microsoft VSCode           https://nuke.build/vscode
 
-    public static int Main () => Execute<Build>(x => x.Compile);
+    public static int Main () => Execute<Build>(x => x.Publish);
 
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
@@ -34,7 +34,7 @@ class Build : NukeBuild
 
     AbsolutePath SourceDirectory => RootDirectory / "src";
     AbsolutePath TestsDirectory => RootDirectory / "tests";
-    AbsolutePath ArtifactsDirectory => RootDirectory / "artifacts";
+    AbsolutePath ArtifactsDirectory => RootDirectory / "../artifacts";
 
     Target Clean => _ => _
         .Before(Restore)
@@ -64,5 +64,25 @@ class Build : NukeBuild
                 .SetInformationalVersion(GitVersion.InformationalVersion)
                 .EnableNoRestore());
         });
+
+    Target Publish => _ => _
+       .DependsOn(Compile)
+       .Executes(() =>
+       {
+           DotNetPublish(s => s
+               .SetConfiguration(Configuration.Release)
+              
+               .SetOutput(ArtifactsDirectory));
+       });
+
+    Target PushGhPages => _ => _
+      .DependsOn(Publish)
+      .Executes(() =>
+      {
+          Nuke.Common.GitTool.Git(s => s
+              .SetConfiguration(Configuration.Release)
+
+              .SetOutput(ArtifactsDirectory));
+      });
 
 }

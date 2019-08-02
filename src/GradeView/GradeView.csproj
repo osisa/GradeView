@@ -8,7 +8,7 @@
     <LangVersion>7.3</LangVersion>
     <RazorLangVersion>3.0</RazorLangVersion>
     <!--<RootNamespace>GradeView</RootNamespace>-->
-    <AssemblyName>Client</AssemblyName>
+   
   </PropertyGroup>
   <ItemGroup>
     <Content Remove="Pages\_Host.cshtml" />

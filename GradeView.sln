@@ -9,11 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		azure-pipelines.yml = azure-pipelines.yml
-		Directory.Build.props = Directory.Build.props
 		LICENSE = LICENSE
 		SolutionInfo.cs = SolutionInfo.cs
 		SolutionInfo.vb = SolutionInfo.vb
 		Test.Build.props = Test.Build.props
+		xDirectory.Build.props = xDirectory.Build.props
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{309BF35A-6562-4A47-8F54-060B6AC0C2BC}"
@@ -24,12 +24,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{309BF35A-6562-4A47-8F54-060B6AC0C2BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{309BF35A-6562-4A47-8F54-060B6AC0C2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EE85DF0-69A3-46A9-93DA-D17261A0786F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8EE85DF0-69A3-46A9-93DA-D17261A0786F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EE85DF0-69A3-46A9-93DA-D17261A0786F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EE85DF0-69A3-46A9-93DA-D17261A0786F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{309BF35A-6562-4A47-8F54-060B6AC0C2BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{309BF35A-6562-4A47-8F54-060B6AC0C2BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

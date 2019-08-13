@@ -1,6 +1,6 @@
 using System;
 
-namespace pingup.Data
+namespace PingUp.Data
 {
     public class WeatherForecast
     {

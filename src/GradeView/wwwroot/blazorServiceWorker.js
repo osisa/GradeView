@@ -36,7 +36,7 @@ const filesToCache = [
     '_framework/blazor.webassembly.js',
      
     // App specific requirements
-    '_framework/_bin/miNationalrot.dll',
+    '_framework/_bin/GradeView.dll',
     //'/_framework/_bin/osisa.Smart.Webapp.pdb',
     'css/bootstrap/bootstrap.min.css',
     'css/open-iconic/font/css/open-iconic-bootstrap.min.css',

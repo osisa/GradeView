@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Components;
 using System.Threading.Tasks;
 using System.Security.Claims;
+using GradeView.Data;
 
 class CustomAuthStateProvider : AuthenticationStateProvider
 {
@@ -26,6 +27,7 @@ namespace GradeView
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
+            services.AddSingleton<WeatherForecastService>();
         }
 
         public void Configure(IComponentsApplicationBuilder app)

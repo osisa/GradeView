@@ -7,7 +7,7 @@ const filesToCache = [
  
 
     '_framework/_bin/Microsoft.AspNetCore.Metadata.dll',
-   '_framework/_bin/Microsoft.Bcl.AsyncInterfaces.dll',
+    '_framework/_bin/Microsoft.Bcl.AsyncInterfaces.dll',
     '_framework/_bin/Microsoft.Extensions.DependencyInjection.Abstractions.dll',
     '_framework/_bin/Microsoft.Extensions.DependencyInjection.dll',
 
@@ -60,7 +60,9 @@ const filesToCache = [
     'css/bootstrap/bootstrap.min.css',
     'css/open-iconic/font/css/open-iconic-bootstrap.min.css',
     'css/site.css',
-    //'/favicon.ico',
+    '/favicon.ico',
+    '/icons/icon-192-192.png',
+    '/icons/icon-512-512.png',
     'index.html',
  
     // Service Worker

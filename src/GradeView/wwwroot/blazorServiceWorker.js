@@ -1,10 +1,9 @@
-const filesToCache = [
-    // Blazor standard requirements
+﻿const filesToCache = [
     '_framework/_bin/Microsoft.AspNetCore.Authorization.dll',
     '_framework/_bin/Microsoft.AspNetCore.Blazor.dll',
     '_framework/_bin/Microsoft.AspNetCore.Components.dll',
     '_framework/_bin/Microsoft.AspNetCore.Components.Browser.dll',
- 
+
 
     '_framework/_bin/Microsoft.AspNetCore.Metadata.dll',
     '_framework/_bin/Microsoft.Bcl.AsyncInterfaces.dll',
@@ -28,35 +27,13 @@ const filesToCache = [
     '_framework/_bin/System.Runtime.CompilerServices.Unsafe.dll',
     '_framework/_bin/System.Text.Json.dll',
     '_framework/_bin/System.Threading.Tasks.Extensions.dll',
-
-    //'/_framework/_bin/Microsoft.AspNetCore.Blazor.dll',
-    //'/_framework/_bin/Microsoft.AspNetCore.Blazor.dll',
-    //'/_framework/_bin/Microsoft.AspNetCore.Blazor.dll',
-    //'/_framework/_bin/Microsoft.AspNetCore.Blazor.dll',
-    //'/_framework/_bin/Microsoft.AspNetCore.Blazor.dll',
-    //'/_framework/_bin/Microsoft.AspNetCore.Blazor.dll',
-    //'/_framework/_bin/Microsoft.AspNetCore.Blazor.dll',
-    //'/_framework/_bin/Microsoft.AspNetCore.Blazor.dll',
-    //'/_framework/_bin/Microsoft.AspNetCore.Blazor.dll',
-
-
-
-    //'/_framework/_bin/Microsoft.AspNetCore.Blazor.TagHelperWorkaround.dll',
-
-
-
-
-
-
     '_framework/wasm/mono.js',
     '_framework/wasm/mono.wasm',
     '_framework/blazor.boot.json',
     '_framework/blazor.server.js',
     '_framework/blazor.webassembly.js',
-     
-    // App specific requirements
+
     '_framework/_bin/GradeView.dll',
-    //'/_framework/_bin/osisa.Smart.Webapp.pdb',
     'css/bootstrap/bootstrap.min.css',
     'css/open-iconic/font/css/open-iconic-bootstrap.min.css',
     'css/site.css',
@@ -64,14 +41,12 @@ const filesToCache = [
     '/icons/icon-192-192.png',
     '/icons/icon-512-512.png',
     'index.html',
- 
-    // Service Worker
+
     'blazorSWRegister.js',
- 
-    // Application Manifest (PWA)
+
     'manifest.json'
 ];
- 
+
 const staticCacheName = 'blazor-cache-v3';
 
 self.addEventListener('install', event => {
@@ -86,7 +61,7 @@ self.addEventListener('install', event => {
 
 self.addEventListener('fetch', event => {
     var requestUrl = new URL(event.request.url);
- 
+
     // First, handle requests for the root path - server up index.html
     if (requestUrl.origin === location.origin) {
         if (requestUrl.pathname === '/') {
@@ -113,7 +88,7 @@ self.addEventListener('fetch', event => {
                             // and the request was for something rfom our own app url
                             // we should add it to the cache
                             if (requestUrl.origin === location.origin) {
- 
+
                                 const pathname = requestUrl.pathname;
                                 console.log("CACHE: Adding " + pathname);
                                 return caches.open(staticCacheName).then(cache => {

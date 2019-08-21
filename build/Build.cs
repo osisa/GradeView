@@ -71,18 +71,8 @@ class Build : NukeBuild
        {
            DotNetPublish(s => s
                .SetConfiguration(Configuration.Release)
-              
+
                .SetOutput(ArtifactsDirectory));
        });
-
-    Target PushGhPages => _ => _
-      .DependsOn(Publish)
-      .Executes(() =>
-      {
-          Nuke.Common.GitTool.Git(s => s
-              .SetConfiguration(Configuration.Release)
-
-              .SetOutput(ArtifactsDirectory));
-      });
 
 }

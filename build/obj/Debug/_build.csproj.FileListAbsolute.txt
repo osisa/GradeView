@@ -1,0 +1,10 @@
+C:\Git\Gradeview\build\bin\Debug\_build.deps.json
+C:\Git\Gradeview\build\bin\Debug\_build.runtimeconfig.json
+C:\Git\Gradeview\build\bin\Debug\_build.runtimeconfig.dev.json
+C:\Git\Gradeview\build\bin\Debug\_build.dll
+C:\Git\Gradeview\build\bin\Debug\_build.pdb
+C:\Git\Gradeview\build\obj\Debug\_build.csprojAssemblyReference.cache
+C:\Git\Gradeview\build\obj\Debug\_build.AssemblyInfoInputs.cache
+C:\Git\Gradeview\build\obj\Debug\_build.AssemblyInfo.cs
+C:\Git\Gradeview\build\obj\Debug\_build.dll
+C:\Git\Gradeview\build\obj\Debug\_build.pdb

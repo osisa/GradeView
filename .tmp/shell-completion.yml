@@ -1,0 +1,38 @@
+Configuration:
+- Debug
+- Release
+Continue: 
+GitHub_PAT: 
+Help: 
+Host:
+- AppVeyor
+- Bitrise
+- Console
+- GitLab
+- Jenkins
+- TeamCity
+- TeamServices
+- Travis
+NoLogo: 
+Plan: 
+Root: 
+Skip:
+- Clean
+- Compile
+- Publish
+- PushGhPages
+- Restore
+- Test
+Solution: 
+Target:
+- Clean
+- Compile
+- Publish
+- PushGhPages
+- Restore
+- Test
+Verbosity:
+- Minimal
+- Normal
+- Quiet
+- Verbose

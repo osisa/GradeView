@@ -1,7 +1,7 @@
 ﻿{
 
-  "name": "GreatView",
-  "short_name": "GreaView",
+  "name": "GradeView",
+  "short_name": "GradeView",
   "icons": [
     {
       "src": "icons/icon-192-192.png",
